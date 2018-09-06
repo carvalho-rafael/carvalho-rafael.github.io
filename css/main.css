@@ -1,0 +1,61 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main{
+    position: relative;
+    background-color: rgb(160, 8, 97);
+    height: 100%;
+    width: 100%;
+}
+
+.panel{
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    left: 10%;
+    top: 15%;
+    background-color: rgba(255, 255, 255, 0.185);
+}
+
+header{
+    height: 15%;
+}
+
+.menu{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.menu li {
+    background-color: blue;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    flex: 10% 0 0;
+}
+
+.face {
+    position: relative;
+    top: -50%;
+    border: solid 10px rgb(160, 8, 97);
+    border-radius: 50%;
+    display: block;
+    object-fit: cover;
+    height: 150px;
+    width: 150px;
+    z-index: 2;
+}
+
+section{
+    position: relative;
+    height: 85%;
+    background-color: rgba(247, 250, 236, 0.5);
+}

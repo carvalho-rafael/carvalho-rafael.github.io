@@ -4,35 +4,53 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125293081-1"></script>
   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-125293081-1');
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-125293081-1');
   </script>
+
   <meta charset="utf-8" />
   <title>Rafael Carvalho</title>
   <meta name="description" content="Rafael Carvalho | Estudante de Análise e Desenvolvimento de Sistemas.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="icon.png">
   <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
-  <link rel="icon" type="image/png" href="icon.png">
 </head>
+
 <body>
   <div class="main">
     <div class="panel">
-      <header>
         <ul class="menu">
-            <li><a href="">about</a></li>
-            <li><a href="">Portfólio</a></li>
-            <img class="face" src="img/perfil.jpg" alt="Rafael">
-            <li><a href="">Hobbies</a></li>
-            <li><a href="">contact</a></li>
-          </ul>
-      </header>
-      <section class="about">About</section>
+          <li>
+            <input type="radio" name="tabs" class="rd-tabs" id="tab-1">
+            <label for="tab-1">Sobre</label>
+            <div data-color="blue" class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur metus nisi, malesuada id lectus vel, malesuada porta sem. Aliquam malesuada varius diam, at luctus augue rhoncus a. Fusce nec libero eu turpis pellentesque consequat. Ut nec leo vulputate, convallis enim a, consequat purus. Sed scelerisque pulvinar massa et eleifend. Proin laoreet id justo in consectetur. Integer nec enim ultrices, vehicula dolor id, condimentum sem. Nam at rhoncus erat. Morbi laoreet libero enim, sit amet porttitor mauris fermentum non. Nam eu eros at tortor luctus egestas nec et lorem. Vivamus vitae accumsan magna. Suspendisse convallis mattis dictum. Suspendisse egestas ante at diam tempor faucibus. Pellentesque vitae sapien tincidunt, cursus lorem nec, interdum leo. Vestibulum sed elit semper, venenatis est sed, fermentum urna. </div>
+          </li>
+          <li>
+            <input type="radio" name="tabs" class="rd-tabs" id="tab-2">
+            <label for="tab-2">Portfólio</label>
+            <div data-color="red" class="content">Fusce sit amet eros magna. Vivamus mauris diam, hendrerit ac dolor non, hendrerit sollicitudin turpis. Aliquam euismod id elit vitae tincidunt. Mauris luctus pellentesque diam id ullamcorper. Proin lacinia diam vitae elit pellentesque, quis facilisis augue ultrices. Vestibulum a neque dolor. Ut laoreet, purus eu congue viverra, erat ligula consectetur dolor, malesuada posuere ligula augue sed enim. Nullam rhoncus arcu quis lacus rutrum lobortis. Pellentesque vitae tincidunt est. Maecenas ornare a purus eget vehicula. Fusce condimentum ex nec justo hendrerit, eget ultricies ipsum scelerisque. Maecenas elementum nibh lacus, vitae commodo urna lacinia a. Cras sit amet leo ac tortor porta luctus quis et ligula. </div>
+          </li>
+          <li>
+            <input type="radio" name="tabs" class="rd-tabs" id="tab-5" checked>
+            <label class="face-label" for="tab-5">  <img class="face" src="img/perfil.jpg" alt="Rafael"></label>
+            <div data-color="gray" class="content"> Vestibulum imperdiet felis sed ante hendrerit, eget imperdiet tellus blandit. Phasellus et ante sed massa faucibus imperdiet. Nam malesuada ullamcorper felis. Cras et eros tellus. Vivamus suscipit laoreet libero non accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum ultricies tincidunt diam, a consequat diam finibus eu. Donec et euismod nunc. </div>
+          </li>
+          <li>
+            <input type="radio" name="tabs" class="rd-tabs" id="tab-3">
+            <label for="tab-3">Hobbies</label>
+            <div data-color="yellow" class="content"> Vivamus et accumsan enim. Quisque a quam vulputate, hendrerit est non, lacinia ex. Integer laoreet sed massa eu mattis. Quisque sed magna eget augue fringilla pulvinar eu at ex. In at lacus tellus. Nulla ac imperdiet magna. Aenean vitae vulputate enim, a tincidunt tellus. Aliquam erat volutpat. Mauris eleifend lobortis ipsum non malesuada. Nam in eros ut diam convallis venenatis. Donec congue arcu mauris. Sed hendrerit justo vel suscipit finibus. Nulla pretium facilisis ipsum sed gravida. </div>
+          </li>
+          <li>
+            <input type="radio" name="tabs" class="rd-tabs" id="tab-4">
+            <label for="tab-4">Contato</label>
+            <div data-color="purple" class="content"> Phasellus porta sapien lorem, at viverra felis molestie ut. Nam egestas, velit non vehicula rhoncus, sem odio pretium turpis, ac vehicula nulla mi at lectus. Sed turpis dolor, laoreet quis efficitur sed, porttitor vitae felis. Sed efficitur blandit pulvinar. Proin et pellentesque elit. Integer tempus non enim at blandit. Quisque sed metus laoreet mauris aliquet molestie in quis neque. Mauris dignissim ac tellus sed euismod. Morbi ac porta augue. Nunc cursus, sem at sollicitudin facilisis, nibh nibh mollis leo, at venenatis neque diam id diam. </div>
+          </li>
+        </ul>
     </div>
   </div>
-
 
   <script src="js/main.js"></script>
 

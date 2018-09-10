@@ -1,8 +1,24 @@
+
 .main{
     position: relative;
-    background-color: gray;
     height: 100%;
+    background-color: #f25f5c;
     width: 100%;
+    z-index:1;
+}
+
+.main:after{
+    background: url("../img/bg.svg");
+    content: "";
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-size: 5%;
+    position: absolute;
+
 }
 
 .panel{
@@ -11,20 +27,25 @@
     width: 70%;
     left: 15%;
     top: 15%;
-    background-color: saddlebrown;
+    background-color: rgba(71, 69, 69, 0.192);
 }
 
 .menu {
+    flex-wrap: wrap;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: end;
+    margin-left: 150px;
+}
+.rd-tabs{
+    padding: 0%;
 }
 
 .rd-tabs ~ label{
     cursor: pointer;
     display: block;
     padding: 20px;
-    font-size: 28px;
+    font-size: 1em;
     color: #ccc
 }
 
@@ -33,7 +54,7 @@
 }
 
 .rd-tabs:checked ~ label {
-    border-bottom: solid 3px #ccc;
+    border-bottom: solid 2px #ccc;
 }
 
 .content {
@@ -44,9 +65,10 @@
     top: 100px;
     margin-top: 40px;
     color: lightcyan;
+    font-size: 1em;
 }
 .rd-tabs:checked ~ .content {
-    animation: fadein 0.2s;    
+    animation: fadein 0.5s;    
     display: block;
 }
 @keyframes fadein {
@@ -60,13 +82,13 @@
 .face {
     border-radius: 100%;
     object-fit: cover;
-    height: 150px;
-    width: 150px;
+    height: 100%;
+    width: 100%;
 }
 
 .face-label {
-    border: solid 8px rgb(251, 255, 0);
-    position: relative;
+    border: solid 8px #f25f5c;
+    position: absolute;
     height: 150px;
     width: 150px;
     padding: 15px!important;
@@ -74,14 +96,35 @@
     top: -100px;
 }
 
-.rd-tabs:checked ~ .face-label {
-    border: solid 8px rgb(251, 255, 0)!important;
-}
-
 .face-label:hover {
-    animation: mix 0.2s linear infinite alternate !important;
+    animation: mix 1.5s infinite ease alternate-reverse!important;
 }
 @keyframes mix{
-    from{border-color: yellow}
-    to{border-color: white}
+    0% {border-color: yellow}
+    25%{border-color: aquamarine}
+    50%{border-color: red}
+    75%{border-color: chartreuse}
+    100%{border-color: purple}
+}
+
+@media only screen and (max-width: 800px) {
+    .face-label {
+        padding: 8px!important;
+        height: 75px;
+        width: 75px;
+        top: -35px;
+    }
+
+    .main {
+        font-size: 0.8em;
+    }
+    .menu{
+        margin-left: 80px;
+    }
+    .panel{
+        width: 96%;
+        left: 2%;
+    }
+
+
 }

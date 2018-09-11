@@ -1,10 +1,11 @@
-
-.main{
+@import url('https://fonts.googleapis.com/css?family=Ruslan+Display');
+@import url('https://fonts.googleapis.com/css?family=Play');.main{
     position: relative;
     height: 100%;
     background-color: #f25f5c;
     width: 100%;
     z-index:1;
+    font-family: 'Play', sans-serif;
 }
 
 .main:after{
@@ -16,9 +17,8 @@
     bottom: 0;
     right: 0;
     z-index: -1;
-    background-size: 5%;
+    background-size: 90px;
     position: absolute;
-
 }
 
 .panel{
@@ -47,6 +47,7 @@
     display: block;
     padding: 20px;
     font-size: 1em;
+    font-family: 'Ruslan Display', cursive;
     color: #ccc
 }
 
@@ -64,6 +65,7 @@
     left: 30px;
     right: 30px;
     top: 140px;
+    bottom: 0px;
     color: lightcyan;
     font-size: 1em;
 }
@@ -107,6 +109,11 @@
     100%{border-color: purple}
 }
 
+.about{
+    line-height: 200%;
+    font-size: 1.3em;
+}
+
 .rd-tabs:checked ~ .portfolio {
     display: flex;
     justify-content: space-evenly;
@@ -118,7 +125,10 @@
     font-size: 0.6em;
     color: #ccc;
     flex: 100px 0 0;
-    cursor: pointer;
+    padding: 30px;
+}
+.portfolio a:hover{
+    background-color: rgba(255, 255, 255, 0.199);
 }
 .icon-portfolio {
     width: 100%;
@@ -128,6 +138,24 @@
     width: 100%;
 }
 
+.rd-tabs:checked ~ .text-me{
+    font-size: 0.8em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    align-content: center;
+    align-items: stretch;
+}
+.text-me a {
+    flex: 25% 0 0;
+}
+.text-me a:hover{
+    background-color: rgba(0, 0, 0, 0.288);
+}
+.social-icon{
+    width: 80px;
+}
 
 @media only screen and (max-width: 800px) {
     .face-label {
@@ -147,6 +175,7 @@
         width: 96%;
         left: 2%;
     }
-
-
+    .social-icon{
+        width: 50px;
+    }
 }

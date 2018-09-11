@@ -33,6 +33,10 @@
 .menu {
     flex-wrap: wrap;
     display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
     flex-direction: row;
     justify-content: end;
     margin-left: 150px;
@@ -116,6 +120,11 @@
 
 .rd-tabs:checked ~ .portfolio {
     display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+
     justify-content: space-evenly;
     flex-wrap: wrap;
     flex-direction: row;
@@ -141,6 +150,10 @@
 .rd-tabs:checked ~ .text-me{
     font-size: 0.8em;
     display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
     flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: column;

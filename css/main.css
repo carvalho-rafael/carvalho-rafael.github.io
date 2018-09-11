@@ -39,7 +39,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     -webkit-flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
     -webkit-justify-content: end;
     
     margin-left: 150px;
@@ -158,13 +158,11 @@
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
     flex-wrap: wrap;
-    justify-content: space-around;
     flex-direction: column;
-    align-content: center;
-    align-items: stretch;
+    align-items: center;
 }
 .text-me a {
-    flex: 25% 0 0;
+    flex: 1;
 }
 .text-me a:hover{
     background-color: rgba(0, 0, 0, 0.288);
@@ -191,7 +189,7 @@
         width: 96%;
         left: 2%;
     }
-    .social-icon, icon{
+    .social-icon, .icon{
         width: 50px;
     }
 }

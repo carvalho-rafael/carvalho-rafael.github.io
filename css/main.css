@@ -39,6 +39,8 @@
     display: -webkit-flex;     /* NEW - Chrome */
     flex-direction: row;
     justify-content: end;
+    -webkit-justify-content: end;
+    
     margin-left: 150px;
     background-color: rgba(0, 0, 0, 0.1);
 }

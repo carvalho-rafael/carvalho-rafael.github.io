@@ -1,194 +1,174 @@
-@import url('https://fonts.googleapis.com/css?family=Ruslan+Display');
+@import url('https://fonts.googleapis.com/css?family=Abel');
 @import url('https://fonts.googleapis.com/css?family=Play');
 
-/* Posicionate main panel*/
 .main{
-    position: relative;
-    height: 100%;
-    background-color: #f25f5c;
-    width: 100%;
-    z-index:1;
     font-family: 'Play', sans-serif;
+    background-color: #f7f7ff;
+    width: 100%;
+    min-height: 100%;
 }
 
-.main:after{
-    background: url("../img/bg.svg");
+.content {
+    margin-left: 350px;
+    margin-right: 30px;
+    padding: 10px;
+}
+
+.left-panel:after{
     content: "";
+    position: absolute;
+    background: url("../img/bg.svg");
+    background-size: 70px;
     opacity: 1;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     z-index: -1;
-    background-size: 90px;
-    position: absolute;
 }
-
-.panel{
-    position: absolute;
-    height: 80%;
-    width: 70%;
-    left: 15%;
-    top: 15%;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-
-.menu {
-    display: flex;
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    background-color: rgba(95, 94, 94, 0);
-}
-.menu li {
-    flex: 20% 0;
-    text-align: center;
-}
-.rd-tabs ~ label{
-    cursor: pointer;
-    display: block;
-    padding: 20px;
-    font-size: 1em;
-    font-family: 'Ruslan Display', cursive;
-    color: #ccc
-}
-
-.rd-tabs ~ label:hover{
-    color: gray;
-}
-
-.rd-tabs:checked ~ label {
-    border-bottom: solid 2px #ccc;
-}
-
-.content {
+.left-panel{
+    position: fixed;
     overflow: auto;
-    display: none;
-    position: absolute;
-    left: 30px;
-    right: 30px;
-    top: 80px;
-    bottom: 20px;
-    color: lightcyan;
-    font-size: 0.6em;
+    background-color: #e2c44d;
+    border-right: 10px solid black;
+    font-family: 'Abel', sans-serif;
+    font-size: 0.8em;
+    top: 0px;
+    bottom: 0px;
+    width: 300px;
+    z-index: 1;
 }
-.rd-tabs:checked ~ .content {
-    animation: fadein 0.5s;    
-    display: block;
-}
-@keyframes fadein {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-.rd-tabs{
-    display: none;
+.panel-content{
+    padding: 20px;
+    z-index: 2;
+    background-color: #e2c44d;
 }
 
-/* set the Logo*/
+.logo-label {
+    border: solid 8px #f7f7ff;
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;    
+    z-index: 2;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+}
+
 .logo {
     height: 100%;
     width: 100%;
 }
-.logo-label {
-    border: solid 8px #f25f5c;
-    position: absolute;
-    left: calc(50% - 58px);
-    top: 20px;
-    height: 80px;
-    width: 80px;
-    border-radius: 100%;
-}
+
 .logo-label:hover {
-    animation: mix 1.5s infinite ease alternate-reverse!important;
+    animation: mix 1s infinite ease alternate-reverse!important;
 }
-.logo-label:hover ~ .panel{
-    animation: mix 1.5s infinite ease alternate-reverse!important;
-}
+
 @keyframes mix{
     25%{border-color: aquamarine}
-    75%{border-color: chartreuse}
-    100%{border-color: purple}
+    75%{border-color: rgba(128, 255, 0, 0.651)}
+    100%{border-color: white}
+}
+
+.content section h2 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #ccc;
 }
 
 /* ABOUT section*/
-.rd-tabs:checked ~ .about{
-    line-height: 200%;
-    font-size: 1.2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.face-text {
 }
 .face {
-    border-radius: 20%;
-    width: 20%; 
+    border-radius: 50%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 150px; 
 }
 
 /* PORTFOLIO section*/
-.rd-tabs:checked ~ .portfolio {
-    display: flex;
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: center;
-}
-.portfolio a{
-    color: #ccc;
-    flex: 100px 0 0;
+
+#portfolio a img{
     padding: 20px;
+    width: 60px;
+    height: 60px;
 }
 
-.icon{
-    width: 80px;
+#portfolio a {
+    display: inline-block;
 }
 
-/* TEXT-ME section*/
-.rd-tabs:checked ~ .text-me{
-    display: flex;
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.text-me a {
-    flex: 50% 0;
+.social-icon {
+    width: 20px;
+    height: 20px;
 }
 
-@media only screen and (max-width: 800px) {
+.social {
+    margin-top: 50px;
+    font-size: 0.8em;
+}
+.social-media {
+    color: black;
+    display: block;
+}
+
+.whatsapp-mob {
+    display: none;
+}
+
+.skill {
+    padding: 8px;
+    border: solid 3px #00345c;
+    border-radius: 10%;
+    display: inline-block;
+    margin: 20px
+}
+
+.skill:hover {
+    background-color: #e7ecf0;
+}
+@media only screen and (max-width: 812px) {
     .logo-label {
-        height: 75px;
-        width: 75px;
-        top: 0px;
-        left: calc(50% - 35px);
+        height: 90px;
+        width: 90px;
     }
     .main {
-        font-size: 0.8em;
+        width: 100%;
+        margin: 0;
     }
 
-    .panel{
-        width: 96%;
-        left: 2%;
+    .content {
+        margin: 0;
     }
-    .social-icon, .icon{
-        width: 50px;
+    .left-panel{
+        position: relative;
+        top: 0px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        min-height: 100%;
     }
-    .rd-tabs:checked ~ .text-me{
-        flex-direction: column;
-        align-items: flex-start;
+    .whatsapp-mob {
+        display: block;
     }
-    .text-me a {
-        flex: auto 0;
+    .whatsapp-web {
+        display: none;
     }
+    .face-text {
+        width: 100%;
+    }
+    .face {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: 100px; 
+    }
+    
 }

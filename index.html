@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125293081-1"></script>
@@ -22,64 +23,77 @@
 </head>
 
 <body>
-  <section class="main">
-      <div class="logo-label" for="tab-5">  <img class="logo" src="img/logo.png" alt="Rafael"></div>
-    <div class="panel">
-        <ul class="menu">
-          <li>
-            <input type="radio" name="tabs" class="rd-tabs" id="tab-1" checked>
-            <label for="tab-1">About</label>
-            <div data-color="#f25f5c" class="content about"> 
-              <img class="face" src="img/perfil.jpg" alt="Rafael">
-              <p>Rafael Carvalho, 21.</p>
-              <p>Systems Analysis and Development Student at IFBA.</p>
-              <p>Salvador, Bahia, Brasil</p>
-            </div>
-          </li>
-          <li>
-            <input type="radio" name="tabs" class="rd-tabs" id="tab-2">
-            <label for="tab-2">Portfolio</label>
-            <div data-color="#e2c44d" class="content portfolio"> 
-               <a target="_blank" href="https://github.com/carvalho-rafael/">
-                <div class="icon-portfolio>">
-                  <img class="icon" src="img/github.svg" alt="github">
-                </div>
-                  <br><span>/carvalho-rafael</span>
-                </a>
-               <a target="_blank" href="https://codepen.io/carvalho-rafael/">
-                <div class="icon-portfolio>"><img class="icon" src="img/codepen.svg" alt="codepen"></div>
-                  <br><span> @carvalho-rafael</span>
-                </a>
-            </div>
-          </li>
-          <li>
-            <input type="radio" name="tabs" class="rd-tabs" id="tab-4">
-            <label for="tab-4">Text me!</label>
-            <div data-color="#247ba0" class="content text-me">
-                <a href="mailto:rafaelvfcarvalho@gmail.com">
-                  <img class="icon" src="img/gmail.png" alt="Email">
-                  rafaelvfcarvalho@gmail.com
-                </a>
-                <a href="#">
-                  <img class="icon" src="img/whatsapp.svg" alt="whatsapp">
-                  (75) 98854 - 9804
-                </a>
-                
-                <a href="https://www.linkedin.com/in/rafael-carvalho-dev/">
-                  <img class="icon" src="img/linkedin.png" alt="linkedin">
-                  /rafael-carvalho-dev
-                </a>
-                <a href="https://www.facebook.com/rafael.victor.737">
-                  <img class="icon" src="img/facebook.png" alt="facebook">
-                  /rafael-carvalho-dev
-                </a>
-            </div>
-          </li>
-        </ul>
+  <div class="left-panel">
+    <div class="panel-content">
+      <div class="logo-label"> <img class="logo" src="img/logo.png" alt="Rafael"></div>
+      <p>Rafael Carvalho, 21.</p>
+      <p>Systems Analysis and Development Student at IFBA. <br>
+      Salvador, Bahia, Brasil</p>
+      <!--social media-->
+      <div class="social">
+        <a class="social-media" href="mailto:rafaelvfcarvalho@gmail.com">
+            <img class="social-icon" src="img/gmail.png" alt="Email">
+            rafaelvfcarvalho@gmail.com
+          </a>
+          <a class="social-media whatsapp-mob" href="https://api.whatsapp.com/send?phone=5575988549804&text=Ol%C3%A1%2C%20Rafael">
+            <img class="social-icon" src="img/whatsapp.svg" alt="whatsapp">
+            (75) 98854 - 9804
+          </a>
+          <a class="social-media whatsapp-web" href="https://web.whatsapp.com/send?phone=5575988549804&text=Ol%C3%A1%2C%20Rafael">
+            <img class="social-icon" src="img/whatsapp.svg" alt="whatsapp">
+            (75) 98854 - 9804
+          </a>
+          <a class="social-media" href="https://www.linkedin.com/in/rafael-carvalho-dev/">
+            <img class="social-icon" src="img/linkedin.png" alt="linkedin">
+          </a>
+          <a class="social-media" href="https://www.facebook.com/rafael.victor.737">
+            <img class="social-icon" src="img/facebook.png" alt="facebook">
+          </a>
+        </div>
+      </div>
+  </div>
+  <div class="main">
+    <div class="content">
+
+      <section id="about">
+        <h2>#About</h1>
+          <img class="face" src="img/perfil.jpg" alt="Rafael">
+          <p class="face-text"><i> "lorem em ipsumlorem orem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum
+              ipsum lorem ipsum lorem ipsumloipsumlorem ipsum lorem ipsum lorem ipsumloipsumlorem ipsum l
+              ipsum lorem ipsum lorem ipsumloipsumlorem ipsum lorem ipsum lorem ipsumloipsumlorem ipsum l
+              ipsum lorem ipsum lorem ipsumloipsumlorem ipsum lorem ipsum lorem ipsumloipsumlorem ipsum l
+              ipsum lorem ipsum lorem ipsumloipsumlorem ipsum  lorem ipsum lorem ipsumloipsumlorem ipsum l"
+            </i></p>
+      </section>
+
+      <section id="portfolio">
+        <h2>#Portfolio</h1>
+        <a target="_blank" href="https://github.com/carvalho-rafael/">
+          <img src="img/github.svg" alt="github">
+        </a>
+        <a target="_blank" href="https://codepen.io/carvalho-rafael/">
+          <img src="img/codepen.svg" alt="codepen">
+        </a>
+      </section>
+
+      <section id="skills">
+        <h2>#Skills</h1>
+          <div class="skill">HTML</div>
+          <div class="skill">Javascript</div>
+          <div class="skill">CSS</div>
+          <div class="skill">Java</div>
+          <div class="skill">PHP</div>
+          <div class="skill">SQL</div>
+          <br>
+          <div class="skill">Bootstrap</div>
+          <div class="skill">Laravel</div>
+          <div class="skill">REST</div>
+        </section>
     </div>
-  </section>
+  </div>
 
   <script src="js/main.js"></script>
 
 </body>
+
 </html>

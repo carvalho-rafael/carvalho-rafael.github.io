@@ -55,6 +55,9 @@ body::before {
 }
 
 .about-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     text-align: justify;
     line-height: 180%;
     width: 70%;

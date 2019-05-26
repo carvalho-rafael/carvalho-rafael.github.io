@@ -16,12 +16,15 @@
   <meta name="description" content="Rafael Carvalho | Estudante de Análise e Desenvolvimento de Sistemas.">
   <meta name="keywords" content="rafael-carvalho portfolio">
   <meta name="author" content="Rafael Carvalho">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="icon.png">
   <link rel="stylesheet" type="text/css" media="screen" href="css/app.min.css" />
+  <link rel="stylesheet" type="text/css" href="node_modules/lightgallery/dist/css/lightgallery.min.css" />
+
 </head>
 
 <body>
+  <div class="home">
   <div class="main-panel">
     <div class="profile-section">
       <img class="profile-photo" src="img/perfil.jpg" alt="">
@@ -56,26 +59,71 @@
     <div class="about-section">
       <p><span class="big-text">
         Rafael Carvalho,</span> 22 anos, estudo Análise e Desenvolvimento de Sistemas no Instituto Federal da Bahia (IFBA). 
-        Já estudei Java e PHP como linguagens de Back-end, tenho interesse em estudar Node.js. Gosto de CSS e também estou aprendendo React</p>
+        Já estudei Java e PHP como linguagens de Back-end, tenho interesse em estudar Node.js. Gosto de CSS e também estou aprendendo React.</p>
       <p> 
        Tenho estudado inglês, meu objetivo é ser fluente. 
       </p>
-      <div class="portfolio-container">
-        <a href="https://codepen.io/carvalho-rafael" class="portfolio-item">
-          <img class="portfolio-icon" src="img/codepen.svg" alt="">
-          <p>CodePen</p>
-        </a>
-        <a href="https://github.com/carvalho-rafael" class="portfolio-item">
-            <img class="portfolio-icon" src="img/github.svg" alt="">
-            <p>Github</p>
-        </a>     
-       </div>
+        <div class="portfolio-container">
+          <a href="https://codepen.io/carvalho-rafael" class="portfolio-item">
+            <img class="portfolio-icon" src="img/codepen.svg" alt="">
+          </a>
+          <a href="https://github.com/carvalho-rafael" class="portfolio-item">
+              <img class="portfolio-icon" src="img/github.svg" alt="">
+          </a>    
+
+          <a href="#projects" class="projects-open portfolio-item">Projetos</a>
+        </div>
     </div>
   </div>
+  </div>
+  <div id="projects">
+    <h1 class="projects-title">Projetos</h1>
+    <div class="project">
+      <h2 class="project-title">Elabore</h2>
+      <ul class="project-tecnologies">
+          <li>PHP</li>
+          <li>Laravel</li>
+          <li>HTML</li>
+          <li>CSS/SASS</li>
+          <li>Inkscape</li>
+        </ul>  
+      <p class="project-info">
+        A Elabore é uma empresa que oferece aulas particulares para alunos do ensino médio e fundamental, além de 
+        cursos pré-vestibular e pré-IFBA.
+      </p>
+      <p>
+        <span class="bold-text">Resultado: </span> uma página inicial de apresentaçao e um painel de controle para adicionar conteúdo ao site.
+        É possivel criar publicações e adicionar imagens.
+      </p>
+      <p>
+        <span class="bold-text">O que eu fiz no projeto?: </span>Tudo. Tanto o back-end quanto o front-end. Foi necessário fazer uma Logo também.
+      </p>
 
+      <div id="lightgallery" >
+        <a href="img/project-1/logo.svg">
+          <img class="project-img" src="img/project-1/logo.svg" />
+        </a>
+        <a href="img/project-1/elabore-1.png">
+            <img class="project-img" src="img/project-1/elabore-1.png" />
+        </a>
+      </div>
+    </div>      
+  </div>
 
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/lightgallery/dist/js/lightgallery.min.js"></script>
+  <script src="node_modules/lg-fullscreen/dist/lg-fullscreen.min.js"></script>
 
-  <script src="js/main.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#lightgallery").lightGallery(); 
+
+      $("#lightgallery a").click(function() {
+        $('html').css("overflow", "hidden");
+      });
+    });
+
+</script>
 
 </body>
 

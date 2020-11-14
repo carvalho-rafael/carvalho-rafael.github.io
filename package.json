@@ -1,0 +1,27 @@
+{
+  "name": "carvalho-rafael.github.io",
+  "version": "1.0.0",
+  "description": "My Personal Page # carvalho-rafael.github.io",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch src/scss/app.scss css/app.min.css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carvalho-rafael/carvalho-rafael.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carvalho-rafael/carvalho-rafael.github.io/issues"
+  },
+  "homepage": "https://github.com/carvalho-rafael/carvalho-rafael.github.io#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

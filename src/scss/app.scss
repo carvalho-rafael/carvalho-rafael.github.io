@@ -2,14 +2,16 @@
 //fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Roboto Mono', monospace;
     font-size: 14px;
     background-color: #444444;
     background-image: url(../img/lines.svg);
-    background-size: auto 60px;
-
-
+    background-size: auto 20px;
     color: #fff;
 }
 
@@ -49,8 +51,7 @@ body{
     width: 5px;
     height: 80px;
     z-index: 6;
-
-}
+} 
 
 .about-section {
     display: flex;
@@ -73,7 +74,9 @@ body{
 .profile-photo {
     border-radius: 50%;
     margin-bottom: 50px;
-    width: 70%;
+    width:  150px;
+    height: 150px;
+    object-fit: cover;
 }
 
 .social-container {
@@ -91,22 +94,6 @@ body{
 
 .whatsapp-mob {
     display: none;
-}
-
-.email-icon:hover path{
-    fill: #e75a4d;
-}
-
-.whatsapp-icon:hover path{
-    fill: #25d366;
-}
-
-.facebook-icon:hover path{
-    fill: #4267b2;
-}
-
-.linkedin-icon:hover path{
-    fill: #0077b5;
 }
 
 .big-text {
@@ -145,17 +132,33 @@ body{
     z-index: 999;
 }
 
+#projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px  30px;
+}
+
 .projects-open {
     flex: 0 1 40%;
     text-align: center;
 }
 
 .project {
-    width: 60%;
-    margin-left: 20%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 20px;
-    border-top: 4px solid rgba(46, 148, 148, .5);
     padding: 20px;
+}
+
+.project::after {
+    content: "";
+    width: 4px;
+    height: 200px;
+    position: absolute;
+    left: -10px;
+    background-color: rgba(46, 148, 148, .5);
 }
 
 .project-tecnologies {
@@ -171,7 +174,7 @@ body{
 
 .project-img {
     width: 200px;
-    height: 500px;
+    max-height: 300px;
     object-fit: contain;
 }
 
@@ -184,14 +187,14 @@ body{
     overflow: auto!important;
 }
 
-#lightgallery {
+.lightgallery {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     flex-wrap: wrap;
 }
 
-#lightgallery a {
+.lightgallery a {
     margin: 0 15px;
 }
 
@@ -243,11 +246,6 @@ body{
     }
     .whatsapp-web {
         display: none;
-    }
-
-    .project {
-        width: 100%;
-        margin: 0;
     }
 }
 

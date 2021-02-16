@@ -21,7 +21,7 @@
     "url": "https://github.com/carvalho-rafael/carvalho-rafael.github.io/issues"
   },
   "homepage": "https://github.com/carvalho-rafael/carvalho-rafael.github.io#readme",
-  "dependencies": {
+  "devDependencies": {
     "node-sass": "^5.0.0"
   }
 }

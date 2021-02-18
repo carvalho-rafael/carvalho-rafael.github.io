@@ -19,8 +19,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="icon.png">
   <link rel="stylesheet" type="text/css" media="screen" href="css/app.min.css" />
-  <link rel="stylesheet" type="text/css" href="lib/lightgallery/dist/css/lightgallery.min.css" />
-
 </head>
 
 <body>
@@ -28,6 +26,7 @@
     <img class="profile-photo" src="img/perfil.jpg" alt="">
     <div>
       <h2>Rafael Carvalho</h2>
+      <a href="https://github.com/carvalho-rafael">github.com/carvalho-rafael</a>
       <div class="social-container">
         <a class="social-item" href="mailto:rafaelvfcarvalho@gmail.com">
           <svg class="social-icon email-icon" width="612px" height="612px" enable-background="new 0 0 612 612"
@@ -65,89 +64,43 @@
           </svg>
         </a>
       </div>
-      <a href="https://github.com/carvalho-rafael">github.com/carvalho-rafael</a>
     </div>
   </div>
   <div class="about-section">
     <h2>Sobre mim</h2>
     <div>
-      <p>Desenvolvedor full-stack, me aperfeiçoando na stack javascript - Node, 
-        ReactJs e React Native. Estudo Inglês e Espanhol.</p>
+      <p>Olá, sou desenvolvedor full-stack, atualmmente trabalhando com javascript - Node,
+        ReactJs e React Native. Formando em Análise e Desenvolvimento de Sistemas pelo Instituto Federal da Bahia. </p>
       <p>
-        Sempre que posso gosto de jogar video game.
+        Gosto de estudar idiomas, tenho boa compreensão do Inglês e estou me aperfeiçoando no Espanhol. Um dos meus Hobbies é jogar
+        video game.
       </p>
     </div>
   </div>
-  <h1 class="projects-title">Projetos</h1>
+  <h2 class="portfolio-title">Portfólio</h2>
   <div id="projects">
-    <div class="project">
-      <div>
-        <h2 class="project-title">Elabore</h2>
-        <ul class="project-tecnologies">
-          <li>PHP</li>
-          <li>Laravel</li>
-          <li>HTML</li>
-          <li>CSS/SASS</li>
-          <li>Inkscape</li>
-        </ul>
-        <p class="project-info">
-          A Elabore é uma empresa que oferece aulas particulares para alunos do ensino médio e fundamental, além de
-          cursos pré-vestibular.
-        </p>
-      </div>
-      <div class="lightgallery">
-        <a href="img/project-1/logo.svg">
-          <img class="project-img" src="img/project-1/logo.svg" />
-        </a>
-        <a href="img/project-1/elabore-1.png">
-          <img class="project-img" src="img/project-1/elabore-1.png" />
-        </a>
-      </div>
-    </div>
-    <div class="project">
-      <div>
-        <h2 class="project-title">Happy</h2>
-        <ul class="project-tecnologies">
-          <li>NodeJs</li>
-          <li>ReactJs</li>
-          <li>React Native</li>
-        </ul>
-        <p class="project-info">
-          Projeto desenvolvido no bootcamp da Rocketseat.
-        </p>
-      </div>
-      <div class="lightgallery">
-        <a href="img/project-2/home.png">
-          <img class="project-img" src="img/project-2/home.png" />
-        </a>
-        <a href="img/project-2/map.png">
-          <img class="project-img" src="img/project-2/map.png" />
-        </a>
-        <a href="img/project-2/detail.png">
-          <img class="project-img" src="img/project-2/detail.png" />
-        </a>
-        <a href="img/project-2/create.png">
-          <img class="project-img" src="img/project-2/create.png" />
-        </a>
-      </div>
-    </div>
+    <a href="https://github.com/carvalho-rafael/elabore" class="project">
+      <img class="project-img" src="img/portfolio/elabore.svg" alt="elabore-logo">
+      <h3 class="project-title">Elabore</h3>
+    </a>
+    <a href="https://github.com/carvalho-rafael/happy" class="project">
+      <img class="project-img" src="img/portfolio/happy.png" alt="happy">
+      <h3 class="project-title">Happy</h3>
+    </a>
+    <a href="https://github.com/carvalho-rafael/elabore" class="project">
+      <img class="project-img" src="img/portfolio/eshop.svg" alt="elabore-logo">
+      <h3 class="project-title">EShop</h3>
+    </a>
+    <a href="https://github.com/carvalho-rafael/happy" class="project">
+      <img class="project-img" src="img/portfolio/chat.svg" alt="happy">
+      <h3 class="project-title">Chatjs</h3>
+    </a>
   </div>
 
-  <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="lib/lightgallery/dist/js/lightgallery.min.js"></script>
-  <script type="text/javascript" src="lib/lg-fullscreen/dist/lg-fullscreen.min.js"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $(".lightgallery").lightGallery();
-
-      $(".lightgallery a").click(function () {
-        $('html').css("overflow", "hidden");
-      });
-    });
-
-  </script>
-
+  <footer>
+    <p>“In a gentle way, you can shake the world.”
+      —Mahatma Gandhi </p>
+  </footer>
 </body>
 
 </html>

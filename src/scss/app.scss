@@ -61,6 +61,22 @@ body{
     object-fit: cover;
 }
 
+.expanded-social-icon{
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: 30px;
+        height: 30px;
+        padding: 5px;    
+    }
+    img {
+        width: 30px;
+        height: 30px;
+        padding: 5px;    
+    }
+}
+
 .social-container {
     display: flex;
     justify-content: start;

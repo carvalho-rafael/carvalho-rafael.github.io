@@ -183,15 +183,14 @@ footer {
     text-align: center;
 }
 
-@media(max-width: 1024px){
-    .home {
-        height: auto;
+@media(max-width: 768px){
+    .expanded-social-icon span {
+        font-size: 12px;
     }
-    body::before {
-        background-size: 200px;
-    }
-    .social-container {
-        width: 90%;
+    .profile-photo {
+        width: 70px;
+        height: 70px;
+        padding: 0;
     }
     .whatsapp-mob {
         display: block;

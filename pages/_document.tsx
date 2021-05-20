@@ -1,8 +1,35 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
+import React from 'react';
+import { ServerStyleSheet } from 'styled-components';
 
 import { GA_TRACKING_ID } from '../lib/gtag'
 
 export default class MyDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
+    const styledComponentSheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
+
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: App => props => styledComponentSheet.collectStyles(<App {...props} />),
+        });
+
+      const initialProps = await Document.getInitialProps(ctx);
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {styledComponentSheet.getStyleElement()}
+          </>
+        )
+      };
+    } finally {
+      styledComponentSheet.seal();
+    }
+  }
+
   render() {
     return (
       <Html>
@@ -24,11 +51,14 @@ export default class MyDocument extends Document {
           `,
             }}
           />
+          <link rel="icon" type="image/png" href="favicon.png" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&display=swap" rel="stylesheet" />
         </Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
+          <body>
+            <Main />
+            <NextScript />
+          </body>
       </Html>
     )
   }

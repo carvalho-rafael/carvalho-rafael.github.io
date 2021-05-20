@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import * as gtag from '../lib/gtag'
+import GlobalStyles from '../styles/globalStyles'
 
 const App = ({ Component, pageProps }) => {
   const router = useRouter()
@@ -14,7 +15,12 @@ const App = ({ Component, pageProps }) => {
     }
   }, [router.events])
 
-  return <Component {...pageProps} />
+  return (
+    <>
+      <GlobalStyles />
+      <Component {...pageProps} />
+    </>
+  )
 }
 
 export default App

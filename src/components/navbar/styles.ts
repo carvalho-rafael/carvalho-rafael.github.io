@@ -30,7 +30,7 @@ export const NavbarContainer = styled.ul<{ active: boolean }>`
 
         position: fixed;
         height: 100vh;
-        width: 100vw;
+        width: 80vw;
         top: 0;
 
         background: #222;
@@ -60,7 +60,8 @@ export const NavbarContainer = styled.ul<{ active: boolean }>`
     }
 `
 export const NavbarWrapper = styled.div`
+    height: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 
 `

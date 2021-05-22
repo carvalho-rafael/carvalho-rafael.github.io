@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { HomeContainer } from '../styles/pages/index'
+import { LayoutContainer } from '../styles/pages/layout'
 import Navbar from '../components/navbar'
 import Profile from '../components/profile'
 export default function Home() {
@@ -8,12 +8,12 @@ export default function Home() {
       <Head>
         <title>Rafael Carvalho</title>
       </Head>
-      <HomeContainer>
-        <Navbar />
+      <LayoutContainer>
+        <Navbar route="home" />
         <main>
           <Profile />
         </main>
-      </HomeContainer>
+      </LayoutContainer>
     </>
   )
 }

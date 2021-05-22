@@ -26,8 +26,13 @@ export const NavbarContainer = styled.div<{ active: boolean }>`
         }
 
         li {
+            position: relative;
             display: none;
             margin: 1rem 2rem;
+            hr {
+                position: absolute;
+                width: 100%;
+            }
         }
 
     }

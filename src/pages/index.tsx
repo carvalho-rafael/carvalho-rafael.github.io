@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { HomeContainer } from '../styles/pages/index'
 import Navbar from '../components/navbar'
+import Profile from '../components/profile'
 export default function Home() {
   return (
     <>
@@ -9,7 +10,9 @@ export default function Home() {
       </Head>
       <HomeContainer>
         <Navbar />
-        <h1>Olá soal</h1>
+        <main>
+          <Profile />
+        </main>
       </HomeContainer>
     </>
   )

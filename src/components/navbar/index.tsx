@@ -9,15 +9,17 @@ export default function Navbar() {
         <>
             <NavbarWrapper>
                 <NavbarContainer active={active}>
-                    <div onClick={() => setActive(prevState => !prevState)}>
-                        {!active ? <MdMenu /> : <MdClose />}
-                    </div>
-                    <li>
-                        <a href="">Home</a>
-                    </li>
-                    <li>
-                        <a href="">Portfolio</a>
-                    </li>
+                    <ul>
+                        <div onClick={() => setActive(prevState => !prevState)}>
+                            {!active ? <MdMenu /> : <MdClose />}
+                        </div>
+                        <li>
+                            <a href="">Home</a>
+                        </li>
+                        <li>
+                            <a href="">Projetos</a>
+                        </li>
+                    </ul>
                 </NavbarContainer>
             </NavbarWrapper>
         </>

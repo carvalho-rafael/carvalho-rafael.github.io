@@ -8,7 +8,6 @@ html,
     font-family: 'Inter', sans-serif;
     line-height: 1.2;
     background: #222222;
-    color: #f1f1f1;
 }
 
 * {

@@ -1,47 +1,58 @@
 import styled, { css } from 'styled-components';
 
-export const NavbarContainer = styled.ul<{ active: boolean }>`
+export const NavbarContainer = styled.div<{ active: boolean }>`
     position: relative;
     display: flex;
     justify-content: flex-end;
 
     width: 100%;
     height: 100px;
-    margin: 0;
-    
-    > div {
+
+    color: #ffc300;
+
+    ul {
+        margin: 0;
         display: flex;
         align-items: center;
-        height: 100px;
-        margin: 0 2rem;
 
-        font-size: 24px;
-    }
+        > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            margin: 0 2rem;
 
-    li {
-        display: none;
-        margin: 1rem 2rem;
+            font-size: 24px;
+        }
+
+        li {
+            display: none;
+            margin: 1rem 2rem;
+        }
+
     }
 
     ${props => props.active && css`
-        flex-direction: column;
-        align-items: flex-end;
         justify-content: flex-start;
+        flex-direction: column;
 
         position: fixed;
-        height: 100vh;
-        width: 80vw;
+        height: 100%;
         top: 0;
 
         background: #222;
-        
-        li {
-            display: block;
+
+        ul {
+            flex-direction: column;
+            align-items: flex-end;
+            li {
+                display: block;
+            }
         }
     `}
 
     @media(min-width: 426px) {
-        flex-direction: row;
+        justify-content: center;
         align-items: center;
 
         width: 100%;
@@ -50,18 +61,29 @@ export const NavbarContainer = styled.ul<{ active: boolean }>`
 
         background: none;
 
-        > div {
-            display: none;
-        }
+        ul {
+            flex-direction: row;
+            > div {
+                display: none;
+            }
 
-        li {
-            display: block;
+            li {
+                display: block;
+            }
         }
     }
 `
 export const NavbarWrapper = styled.div`
-    height: 100px;
+    flex: 1;    
     display: flex;
     justify-content: flex-end;
+
+    width: 100%;
+    height: 100px;
+
+    @media(min-width: 426px) {
+        flex: 0;
+        justify-content: center;
+    }
 
 `

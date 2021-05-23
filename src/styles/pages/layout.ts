@@ -14,7 +14,7 @@ export const LayoutContainer= styled.div`
         flex-direction: column;
     }
 
-    @media(min-width: 426px) {
+    @media(min-width: 769px) {
         width: 100vw;
         height: 100vh;
 

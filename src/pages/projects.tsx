@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../components/navbar'
+import ProjectsComponent from '../components/projects'
 import { LayoutContainer } from '../styles/pages/layout'
 
 export default function Projects() {
@@ -11,7 +12,7 @@ export default function Projects() {
             <LayoutContainer>
                 <Navbar route="projects" />
                 <main>
-                    <h1>meus projetos</h1>
+                    <ProjectsComponent />
                 </main>
             </LayoutContainer>
         </>
